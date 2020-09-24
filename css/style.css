@@ -1060,6 +1060,8 @@ body.lock {
 
 .how_work__item {
   margin-top: 2rem;
+  margin-left: .25rem;
+  margin-right: .25rem;
 }
 
 .how_work__text {
