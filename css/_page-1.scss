@@ -1,0 +1,82 @@
+.page_1 {
+    background-image: url(../img/1bg.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: calc(100vh + 300px);
+    color: #fff;
+}
+
+.page_1_content {
+    display: flex;
+    padding-top: 100px;
+
+    &__title {
+        color: #fff;
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+
+    &__img {
+        max-width: 470px;
+    }
+}
+
+.page_1_product {
+    margin-top: 2rem;
+
+    &__row {
+        display: flex;
+
+    }
+
+    &__row:last-child {
+        margin-top: 2.5rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__name {
+        @include futura;
+        font-weight: 300;
+        color: #f7b12b;
+        font-size: 1.25rem;
+        margin-left: 1.25rem;
+    }
+
+    &__item:last-child {
+        margin-left: 4rem;
+
+    }
+
+    &__icon {
+        max-width: 50px;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .page_1_content {
+        &__img {
+            max-width: 300px;
+        }
+    }
+}
+
+@media(max-width:850px) {
+    .page_1_content {
+        &__img {
+            display: none;
+        }
+    }
+}
+
+@media(max-width:550px) {
+    .page_1_content {
+        padding-top: 50px;
+    }
+}

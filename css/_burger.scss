@@ -15,7 +15,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
     }
 
     &__body {
@@ -28,11 +27,12 @@
         padding: .75em 0;
     }
     &__logo {
-        flex-basis: 15%;
+        flex-basis: 20%;
+        display: flex;
     }
 
     &__menu {
-        flex-basis: 85%;
+        flex-basis: 80%;
     }
 
     &__list {
@@ -43,14 +43,14 @@
     }
 
     &__link {
-        font-weight: 700;
-        color: rgba(13, 22, 99, 0.65);
+        font-weight: 400;
+        color: #fff;
         text-decoration: none;
         transition: all .45s;
+        font-family: 'Montserrat', sans-serif;
 
         &:hover {
             cursor: pointer;
-            color: $main-text;
         }
 
     }
@@ -64,6 +64,13 @@
         display: flex;
         justify-content: space-between;
     }
+
+    &__cell {
+        color: #fff;
+        font-weight: 300;
+        display: inline-block;
+        margin-left: .75rem;
+    }
     
    
 
@@ -71,17 +78,18 @@
 
 @media(max-width:1170px) {
     .header {
-        &__time {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+     
       
     
         &__callback {
             display: flex;
             flex-direction: column;
             align-items: center;
+        
+        }
+        &__cell {
+            margin-left: 0; 
+            margin-top: 1rem;
         }
     }
 }
@@ -89,7 +97,7 @@
 
 
 .logo-img {
-    max-width: 7em;
+    max-width: 8rem;
     width: 100%;
 }
 
@@ -112,11 +120,23 @@
         flex-direction: column;
         justify-content: space-around;
         overflow: auto;
-        background-color: #ccc;
+        background-image: linear-gradient(248deg, #f18a87 0%, #a790ec 100%);
     }
 
     .menu_active {
         right: 0;
+    }
+
+    .header__body {
+        padding: 1.5rem 0;
+    }
+
+    .header__logo {
+        flex-basis: 30%;
+    }
+
+    .logo-img {
+        max-width: 180px;
     }
 
     .header__burger {
@@ -132,7 +152,7 @@
         display: block;
         height: 2px;
         width: 100%;
-        background-color: #000;
+        background-color: #34bdf3;
     }
 
     .header__burger span:not(first-child) {
