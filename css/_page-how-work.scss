@@ -4,5 +4,24 @@
 
 .how_work {
     background-color: #fff;
-    padding: 2rem 0;
+    padding: 3rem 0;
+    text-align: center;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 970px;
+        margin-left: auto;
+        margin-right:  auto;
+    }
+
+    &__item {
+        margin-top: 2rem;
+    }
+
+    &__text {
+        margin-top: .5rem;
+        display: inline-block;
+    }
 }
