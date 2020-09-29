@@ -154,3 +154,38 @@ document.addEventListener('keydown', function (e) {
             Element.msMathesSelector;
     }
 })();
+
+
+
+$(document).ready(function () {
+  
+     //slowScroll
+    var $page = $('html, body');
+    $('a[href*="#"]').click(function () {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 3000);
+        return false;
+    });
+
+    //currentLight
+    jQuery(window).scroll(function () {
+        var $sections = $('.xsection');
+        $sections.each(function (i, el) {
+            var top = $(el).offset().top - 100;
+            var bottom = top + $(el).height();
+            var scroll = $(window).scrollTop();
+            var id = $(el).attr('id');
+            if (scroll > top && scroll < bottom) {
+                $('a.active').removeClass('active');
+                $('a[href="#' + id + '"]').addClass('active');
+
+            }
+
+            if (top = 0) {
+                    $('a.active').removeClass('active');
+            }
+        })
+    });
+
+});

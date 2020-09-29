@@ -811,6 +811,10 @@ body.lock {
   font-size: 2.2rem;
 }
 
+a.active {
+  color: red;
+}
+
 .main-btn {
   font-size: 14px;
   letter-spacing: .35px;
