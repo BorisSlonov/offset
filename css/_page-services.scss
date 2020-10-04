@@ -1,0 +1,172 @@
+.page-services {
+    margin-top: 2rem;
+}
+
+
+.services {
+    text-align: center;
+    margin: 2rem 0;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__row:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-basis: calc(33.333% - 15px);
+        height: 100%;
+        min-height: 200px;
+    }
+}
+
+.services-item {
+
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+        .services-item__hover {
+            transition: all .2s;
+            display: flex;
+            opacity: 1;
+        }
+
+        .services-item__num {
+            transition: all .2s;
+            background-color: #fff;
+            color: #f4b53c;
+        }
+
+        &:after {
+            transition: all .2s;
+            opacity: 0.9;
+
+        }
+
+        &::before {
+            background-color: #0788bb;
+            transition: all .2s;
+        }
+
+     
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        height: 100%;
+        width: 40px;
+        background-color: #34bdf3;
+    }
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f7b02bc4;
+        opacity: 0;
+       
+
+    }
+
+    &__num {
+        position: absolute;
+        z-index: 2;
+        right: 10px;
+        bottom: 10px;
+        background-color: #ea358b;
+        padding: 0.5rem .75rem;
+        color: #fff;
+    }
+
+
+    &__hover {
+        display: flex;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+    }
+
+    &__descr {
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+
+.services-name {
+    position: absolute;
+    z-index: 2;
+    left: -12px;
+    transform: rotate(-90deg);
+    color: #fff;
+}
+
+
+
+@media(max-width:768px) {
+    .services {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &__row {
+            flex-direction: column;
+            width: 100%;
+            flex-basis: calc(50% - 10px);
+        }
+
+        &__row:not(:first-child) {
+            margin-top: 0;
+        }
+
+        &__item:not(:first-child) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media(max-width:500px) {
+    .services {
+        flex-direction: column;
+
+        &__row:not(:first-child) {
+            margin-top: 1rem;
+        }
+    }
+
+    .services-name  {
+        left: -5px;
+    }
+}
+
+
+
+//bg
+.services-visitka {
+    background-image: url(../img/product/visitki.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}

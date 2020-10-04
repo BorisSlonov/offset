@@ -188,4 +188,25 @@ $(document).ready(function () {
         })
     });
 
+
+  //меняем цвет плашке
+    jQuery(window).scroll(function () {
+        if (jQuery(window).scrollTop() > 50) {
+            jQuery('.header').addClass('bgc-fff');
+            jQuery('.header').removeClass('bgc-fff-no');
+        }
+        else {
+            jQuery('.header').addClass('bgc-fff-no');
+        }
+    });
+    
+
+
+
+  
+   
+
 });
+
+
+

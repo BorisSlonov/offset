@@ -815,6 +815,20 @@ a.active {
   color: red;
 }
 
+.bgc-fff {
+  background-color: #750b5d;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.bgc-fff.bgc-fff-no {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
 .main-btn {
   font-size: 14px;
   letter-spacing: .35px;
@@ -1071,5 +1085,195 @@ a.active {
 .how_work__text {
   margin-top: .5rem;
   display: inline-block;
+}
+
+.page-services {
+  margin-top: 2rem;
+}
+
+.services {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.services__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services__row:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.services__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-preferred-size: calc(33.333% - 15px);
+      flex-basis: calc(33.333% - 15px);
+  height: 100%;
+  min-height: 200px;
+}
+
+.services-item {
+  position: relative;
+  text-decoration: none;
+}
+
+.services-item:hover .services-item__hover {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.services-item:hover .services-item__num {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-color: #fff;
+  color: #f4b53c;
+}
+
+.services-item:hover:after {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  opacity: 0.9;
+}
+
+.services-item:hover::before {
+  background-color: #0788bb;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.services-item::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  background-color: #34bdf3;
+}
+
+.services-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f7b02bc4;
+  opacity: 0;
+}
+
+.services-item__num {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 10px;
+  background-color: #ea358b;
+  padding: 0.5rem .75rem;
+  color: #fff;
+}
+
+.services-item__hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+
+.services-item__descr {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.services-name {
+  position: absolute;
+  z-index: 2;
+  left: -12px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .services {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .services__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -ms-flex-preferred-size: calc(50% - 10px);
+        flex-basis: calc(50% - 10px);
+  }
+  .services__row:not(:first-child) {
+    margin-top: 0;
+  }
+  .services__item:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services__row:not(:first-child) {
+    margin-top: 1rem;
+  }
+  .services-name {
+    left: -5px;
+  }
+}
+
+.services-visitka {
+  background-image: url(../img/product/visitki.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

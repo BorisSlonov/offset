@@ -34,3 +34,18 @@
 a.active {
     color: red;
 }
+
+
+.bgc-fff {
+    background-color: #750b5d;
+    transition: all .25s;
+
+}
+
+.bgc-fff.bgc-fff-no {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: all .25s;
+
+}
