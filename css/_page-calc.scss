@@ -1,0 +1,76 @@
+.page-calc {
+    padding-bottom: 3rem;
+}
+
+.calc-wrap {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #f7b12b;
+    padding: 2rem 0; 
+
+    &__item {
+        flex-basis: calc(50% - 20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.calc-wrapper {
+    width: 100%;
+    max-width: 450px;
+}
+
+.calc {
+
+    .main-btn {
+        margin-left: auto;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 260px;
+    }
+ 
+  
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: .75rem;
+        max-width: 380px;
+        label {
+            margin-right: 0.74rem;
+            color: #575988;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            margin-right: auto;
+        }
+    }
+
+    &__select {
+        width: 100%;
+        padding: .5rem 1rem;
+        max-width: 260px;
+        border-radius: 10px;
+        border: 1px solid #d5d5d5;
+    }
+}
+
+.calc-h3 {
+    margin-right: auto;
+    
+}
+
+.checkbox-ios {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+
+.span_one_side,
+.span_two_side {
+    @include monttserat;
+    color: #bebebe;
+}
+.span_checked_color {
+    color: #575988;
+}

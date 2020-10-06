@@ -158,8 +158,8 @@ document.addEventListener('keydown', function (e) {
 
 
 $(document).ready(function () {
-  
-     //slowScroll
+
+    //slowScroll
     var $page = $('html, body');
     $('a[href*="#"]').click(function () {
         $page.animate({
@@ -183,13 +183,13 @@ $(document).ready(function () {
             }
 
             if (top = 0) {
-                    $('a.active').removeClass('active');
+                $('a.active').removeClass('active');
             }
         })
     });
 
 
-  //меняем цвет плашке
+    //меняем цвет плашке
     jQuery(window).scroll(function () {
         if (jQuery(window).scrollTop() > 50) {
             jQuery('.header').addClass('bgc-fff');
@@ -199,12 +199,126 @@ $(document).ready(function () {
             jQuery('.header').addClass('bgc-fff-no');
         }
     });
-    
 
 
 
-  
-   
+    //calc
+
+
+
+    //взаимоисключаем селекеты
+    $('select').change(function () {
+        //select
+        var color = $('#color').val();
+        var paper = $('#paper').val();
+        var format = $('#format').val();
+        var amount = $('#amount').val();
+        var corner = $('#corner').val();
+
+        //убираем А3 и визитки при ч/б
+        if (color == 1) {
+            $('#format option[value="5"]').prop('disabled', true);
+            $('#format option[value="6"]').prop('disabled', true);
+        } else {
+            $('#format option[value="5"]').prop('disabled', false);
+            $('#format option[value="6"]').prop('disabled', false);
+        }
+
+
+        //если чб или двухцветная - только офсет бумага
+        if (color == 1 || color == 2) {
+            // b/w
+            $('#paper option[value="2"]').prop('disabled', true);
+
+            //отключаем выбор сторон и скрываем
+            $('#checkbox-ios2').prop('checked', false);
+            $('.one_or_two').hide();
+
+        } else {
+            // 2 color
+            $('#paper option[value="2"]').prop('disabled', false);
+
+            $('.one_or_two').show();
+        }
+
+
+        //убираем А3 при ч/б
+        if (format == 6) {
+            $('#corner').prop('disabled', true);
+        } else {
+            $('#corner').prop('disabled', false);
+        }
+
+
+
+    })
+
+
+
+    jQuery('.calc-btn').click(function () {
+
+        //select
+        var color = $('#color').val();
+        var paper = $('#paper').val();
+        var format = $('#format').val();
+        var amount = $('#amount').val();
+        var corner = $('#corner').val();
+
+
+        if (color == 1 && (format == 1 || format == 2)) {
+            // b/w
+
+            $('.result').html(Math.round(amount * .28) + Math.round(amount * corner))
+
+
+        } else if (color == 1 && format == 3) {
+            $('.result').html(Math.round(amount * .40) + Math.round(amount * corner))
+
+        } else if (color == 1 && format == 4) {
+            $('.result').html(Math.round(amount * .75) + Math.round(amount * corner))
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //user
+        //   var kwmt = jQuery('#kwmt').val();
+        //   var months = jQuery('#months').val();
+        //   var score = parseFloat(kwmt * months) * oil;
+        //   score =  score + "кг" + " " + "расход за период" ;
+        //   jQuery('.output label').text(score);
+        //   jQuery('.output').show();
+    });
+
+
+
+
+
+
+    //цвет текста при чекед
+    $('#checkbox-ios2').click(function () {
+        if ($('#checkbox-ios2').prop('checked')) {
+            $('.span_two_side').addClass('span_checked_color')
+            $('.span_one_side').removeClass('span_checked_color')
+        } else {
+            $('.span_one_side').addClass('span_checked_color')
+            $('.span_two_side').removeClass('span_checked_color')
+        }
+    })
+
+
+
+
 
 });
 

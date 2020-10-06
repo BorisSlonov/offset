@@ -6,6 +6,9 @@
 .services {
     text-align: center;
     margin: 2rem 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 0 6px 0 #f9f9f9;
 
     &__row {
         display: flex;
@@ -25,6 +28,35 @@
         flex-basis: calc(33.333% - 15px);
         height: 100%;
         min-height: 200px;
+    }
+
+    &__item50 {
+        flex-basis: calc(50% - 10px);
+        text-align: left;
+        padding: 3.5rem 0 3.5rem 2rem;
+        text-decoration: none;
+        transition: all .25s;
+    }
+
+    &__item50:hover {
+    
+        transform: translateY(-5px);
+    }
+
+    &__item50_h3 {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__item50_h3_yellow {
+        color: #ffd755;
+        
+    }
+
+    &__item50_h3_white{
+        color: #fff;
+        
     }
 }
 
@@ -57,7 +89,7 @@
             transition: all .2s;
         }
 
-     
+
     }
 
     &::before {
@@ -82,7 +114,7 @@
         height: 100%;
         background-color: #f7b02bc4;
         opacity: 0;
-       
+
 
     }
 
@@ -131,6 +163,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         &__row {
             flex-direction: column;
             width: 100%;
@@ -156,7 +189,7 @@
         }
     }
 
-    .services-name  {
+    .services-name {
         left: -5px;
     }
 }
@@ -164,6 +197,21 @@
 
 
 //bg
+
+.we_make_maket {
+    background-image: url(../img/product/idea-bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.we_dist {
+    background-image: url(../img/product/woomen-bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
 .services-visitka {
     background-image: url(../img/product/visitki.jpg);
     background-size: cover;
