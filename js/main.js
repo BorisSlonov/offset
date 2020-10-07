@@ -248,14 +248,11 @@ $(document).ready(function () {
         } else {
             $('#corner').prop('disabled', false);
         }
-
-
-
     })
+    //взаимоисключаем селекеты
 
 
-
-    jQuery('.calc-btn').click(function () {
+    $('.calc-btn').click(function () {
 
         //select
         var color = $('#color').val();
@@ -264,18 +261,147 @@ $(document).ready(function () {
         var amount = $('#amount').val();
         var corner = $('#corner').val();
 
-
+        // b/w
         if (color == 1 && (format == 1 || format == 2)) {
-            // b/w
 
             $('.result').html(Math.round(amount * .28) + Math.round(amount * corner))
 
-
         } else if (color == 1 && format == 3) {
+
             $('.result').html(Math.round(amount * .40) + Math.round(amount * corner))
 
+
         } else if (color == 1 && format == 4) {
+
             $('.result').html(Math.round(amount * .75) + Math.round(amount * corner))
+
+        }
+        // b/w
+
+
+
+        // colors print одна сторона
+        if ($('#checkbox-ios2').prop('checked', false) && color == 3 && paper == 2) {
+            //colors              цветная печать, глянцевая бумага a6 на одной стороне
+            if (format == 2 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * .65) + Math.round(amount * corner))
+
+            } else if (format == 2 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * .50) + Math.round(amount * corner))
+
+            } else if (format == 2 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * .45) + Math.round(amount * corner))
+
+            }
+
+            //                      цветная печать, глянцевая бумага a5 на одной стороне
+            if (format == 3 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * .90) + Math.round(amount * corner))
+
+            } else if (format == 3 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * .70) + Math.round(amount * corner))
+
+            } else if (format == 3 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * .65) + Math.round(amount * corner))
+
+            }
+
+            //                      цветная печать, глянцевая бумага a4 на одной стороне
+            if (format == 4 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * 1.25) + Math.round(amount * corner))
+
+            } else if (format == 4 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * 1.15) + Math.round(amount * corner))
+
+            } else if (format == 4 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * 1.10) + Math.round(amount * corner))
+
+            }
+
+            //                      цветная печать, глянцевая бумага a3 на одной стороне
+            if (format == 5 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * 2.25) + Math.round(amount * corner))
+
+            } else if (format == 5 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * 2.15) + Math.round(amount * corner))
+
+            } else if (format == 5 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * 2.10) + Math.round(amount * corner))
+
+            }
+
+        } else if ($('#checkbox-ios2').prop('checked', false) && color == 3 && paper == 2) { // две стороны
+            //colors - 2 side      цветная печать, глянцевая бумага a6 на двух сторонах
+            if (format == 2 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * .70) + Math.round(amount * corner))
+
+            } else if (format == 2 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * .55) + Math.round(amount * corner))
+
+            } else if (format == 3 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * .50) + Math.round(amount * corner))
+
+            }
+
+            //                      цветная печать, глянцевая бумага a5 на двух сторонах
+            if (format == 2 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * .95) + Math.round(amount * corner))
+
+            } else if (format == 2 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * .75) + Math.round(amount * corner))
+
+            } else if (format == 3 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * .70) + Math.round(amount * corner))
+
+            }
+
+            //                      цветная печать, глянцевая бумага a4 на двух сторонах
+            if (format == 4 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * 1.30) + Math.round(amount * corner))
+
+            } else if (format == 4 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * 1.20) + Math.round(amount * corner))
+
+            } else if (format == 4 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * 1.15) + Math.round(amount * corner))
+
+            }
+
+            //                      цветная печать, глянцевая бумага a3 на двух сторонах
+            if (format == 5 && amount <= 5000) {
+
+                $('.result').html(Math.round(amount * 2.30) + Math.round(amount * corner))
+
+            } else if (format == 5 && amount <= 10000) {
+
+                $('.result').html(Math.round(amount * 2.20) + Math.round(amount * corner))
+
+            } else if (format == 5 && amount >= 10000) {
+
+                $('.result').html(Math.round(amount * 2.15) + Math.round(amount * corner))
+
+            }
         }
 
 
@@ -285,25 +411,7 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-        //user
-        //   var kwmt = jQuery('#kwmt').val();
-        //   var months = jQuery('#months').val();
-        //   var score = parseFloat(kwmt * months) * oil;
-        //   score =  score + "кг" + " " + "расход за период" ;
-        //   jQuery('.output label').text(score);
-        //   jQuery('.output').show();
     });
-
-
-
-
-
 
     //цвет текста при чекед
     $('#checkbox-ios2').click(function () {
@@ -315,10 +423,6 @@ $(document).ready(function () {
             $('.span_two_side').removeClass('span_checked_color')
         }
     })
-
-
-
-
 
 });
 
