@@ -342,7 +342,7 @@ $(document).ready(function () {
 
             }
 
-        } else if ($('#checkbox-ios2').prop('checked', false) && color == 3 && paper == 2) { // две стороны
+        } else if ($('#checkbox-ios2').prop('checked', true) && color == 3 && paper == 2) { // две стороны
             //colors - 2 side      цветная печать, глянцевая бумага a6 на двух сторонах
             if (format == 2 && amount <= 5000) {
 
