@@ -402,7 +402,7 @@ $(document).ready(function () {
                 $('.result').html(Math.round(amount * 2.15) + Math.round(amount * corner))
 
             }
-        }
+        } 
 
 
 
