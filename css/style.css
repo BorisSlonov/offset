@@ -1096,8 +1096,8 @@ a.active {
   margin: 2rem 0;
   background-color: #f9f9f9;
   padding: 10px;
-  -webkit-box-shadow: 0 0 6px 0 #f9f9f9;
-          box-shadow: 0 0 6px 0 #f9f9f9;
+  -webkit-box-shadow: 0 10px 10px 0 #ccc;
+          box-shadow: 0 10px 10px 0 #ccc;
 }
 
 .services__row {
@@ -1336,12 +1336,12 @@ a.active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid #f7b12b;
-  padding: 2rem 0;
+  padding: 1rem;
 }
 
 .calc-wrap__item {
-  -ms-flex-preferred-size: calc(50% - 20px);
-      flex-basis: calc(50% - 20px);
+  -ms-flex-preferred-size: calc(50% - 2.5px);
+      flex-basis: calc(50% - 2.5px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1353,9 +1353,17 @@ a.active {
           align-items: center;
 }
 
+.calc-wrap__item:last-child {
+  background-color: #ececf1;
+}
+
 .calc-wrapper {
   width: 100%;
   max-width: 450px;
+}
+
+.calc {
+  margin-left: 1.5rem;
 }
 
 .calc .main-btn {
@@ -1389,6 +1397,10 @@ a.active {
   margin-right: auto;
 }
 
+.calc__row:first-child {
+  margin-bottom: 1.5rem;
+}
+
 .calc__select {
   width: 100%;
   padding: .5rem 1rem;
@@ -1398,7 +1410,22 @@ a.active {
 }
 
 .calc-h3 {
+  position: relative;
   margin-right: auto;
+  font-size: 1.5rem;
+}
+
+.calc-h3::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -5px;
+  left: -70px;
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/icon/icon-settings.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .checkbox-ios {
@@ -1414,6 +1441,128 @@ a.active {
 
 .span_checked_color {
   color: #575988;
+}
+
+.score {
+  font-family: 'Montserrat', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 380px;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.calc-form-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.calc-form-form__title {
+  color: #f7b12b;
+  font-size: 1.8rem;
+}
+
+.calc-form-form__input {
+  margin-top: 1rem;
+  border: 1px solid #d5d5d5;
+  padding: 0.5rem .75rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.calc-form-form__input:focus {
+  border-color: #f7b12b;
+}
+
+.calc-form-form__btn {
+  margin-top: 1rem;
+}
+
+.calc_form_descr {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.calc_form_descr__num {
+  font-size: 1.75rem;
+}
+
+.calc_form_descr__link {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+.calc_form_descr__link:hover {
+  color: #f7b12b;
+}
+
+@media (max-width: 1110px) {
+  .calc-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .calc-wrap__item:last-child {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 535px) {
+  .calc-h3::before {
+    left: auto;
+    right: -75px;
+    top: -15px;
+  }
+  .calc {
+    margin-left: 0;
+  }
+  .calc .main-btn {
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .calc-h3::before {
+    display: none;
+  }
+}
+
+@media (max-width: 405px) {
+  .calc__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .calc__row label {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .checkbox-ios {
@@ -1631,7 +1780,7 @@ a.active {
 }
 
 select.minimal {
-  background-image: linear-gradient(45deg, transparent 50%, #f7b12b 50%), linear-gradient(135deg, #f7b12b 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-image: linear-gradient(45deg, transparent 50%, #f7b12b 50%), linear-gradient(135deg, #f7b12b 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
@@ -1640,7 +1789,7 @@ select.minimal {
 select.minimal:focus {
   -webkit-transition: all .25s;
   transition: all .25s;
-  background-image: linear-gradient(45deg, #f7b12b 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #f7b12b 50%), linear-gradient(to right, #ccc, #ccc);
+  background-image: linear-gradient(45deg, #f7b12b 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #f7b12b 50%);
   background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;

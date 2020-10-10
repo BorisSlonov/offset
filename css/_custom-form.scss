@@ -232,8 +232,7 @@ $darkenColor: darken($activeColor, 20%);
 select.minimal {
     background-image:
         linear-gradient(45deg, transparent 50%, #f7b12b 50%),
-        linear-gradient(135deg, #f7b12b  50%, transparent 50%),
-        linear-gradient(to right, #ccc, #ccc);
+        linear-gradient(135deg, #f7b12b  50%, transparent 50%);
     background-position:
         calc(100% - 20px) calc(1em + 2px),
         calc(100% - 15px) calc(1em + 2px),
@@ -249,8 +248,7 @@ select.minimal:focus {
     transition: all .25s;
     background-image:
         linear-gradient(45deg, #f7b12b  50%, transparent 50%),
-        linear-gradient(135deg, transparent 50%, #f7b12b  50%),
-        linear-gradient(to right, #ccc, #ccc);
+        linear-gradient(135deg, transparent 50%, #f7b12b  50%);
     background-position:
         calc(100% - 15px) 1em,
         calc(100% - 20px) 1em,

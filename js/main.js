@@ -86,8 +86,8 @@ $(document).ready(function () {
             $('#format option[value="6"]').prop('disabled', true);
             $('#format option[value="5"]').prop('selected', false);
             $('#format option[value="6"]').prop('selected', false);
-           
-            
+
+
         } else {
             $('#format option[value="5"]').prop('disabled', false);
             $('#format option[value="6"]').prop('disabled', false);
@@ -143,16 +143,16 @@ $(document).ready(function () {
         // b/w
         if (color == 1 && (format == 1 || format == 2)) {
 
-            $('.result').html(Math.round(amount * .28) + Math.round(amount * corner))
+            $('.result').html(Math.round(amount * .28))
 
         } else if (color == 1 && format == 3) {
 
-            $('.result').html(Math.round(amount * .40) + Math.round(amount * corner))
+            $('.result').html(Math.round(amount * .40))
 
 
         } else if (color == 1 && format == 4) {
 
-            $('.result').html(Math.round(amount * .75) + Math.round(amount * corner))
+            $('.result').html(Math.round(amount * .75))
 
         }
         // b/w
@@ -482,6 +482,8 @@ $(document).ready(function () {
             $('.span_two_side').removeClass('span_checked_color')
         }
     })
+
+   
 
 });
 
