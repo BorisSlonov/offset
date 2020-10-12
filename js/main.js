@@ -93,7 +93,13 @@ $(document).ready(function () {
         var corner = $('#corner').val();
 
 
-
+        // убираем еврофлаеры с ч/б
+        if (color != 1) {
+            $('#format option[value="1"]').prop('disabled', false);
+        } else {
+            $('#format option[value="1"]').prop('disabled', true);
+            $('#format option[value="1"]').prop('selected', false);
+        }
 
         //убираем А3 и визитки при ч/б
         if (color == 1) {
