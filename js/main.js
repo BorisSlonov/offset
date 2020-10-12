@@ -46,7 +46,7 @@ $(document).ready(function () {
     jQuery(window).scroll(function () {
         var $sections = $('.xsection');
         $sections.each(function (i, el) {
-            var top = $(el).offset().top - 150;
+            var top = $(el).offset().top - 50;
             var bottom = top + $(el).height();
             var scroll = $(window).scrollTop();
             var id = $(el).attr('id');
