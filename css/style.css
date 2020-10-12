@@ -1378,6 +1378,7 @@ a.active {
 
 .page-calc {
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 .calc-wrap {
@@ -1868,12 +1869,11 @@ select {
 
 /* arrows */
 .page-portfolio {
-  margin-top: 1.5rem;
+  padding-top: 3rem;
 }
 
 .portfolio {
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2013,7 +2013,7 @@ select {
 }
 
 .page-reviews {
-  margin: 3rem 0;
+  padding: 5rem 0;
 }
 
 .wrap-footer {
