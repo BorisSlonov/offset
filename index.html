@@ -31,14 +31,17 @@
                     <!-- navigation -->
                     <nav class='header__menu'>
                         <ul class='header__list'>
-                            <li class=''><a href='#popup' class='header__link popup-link'><span
-                                        class="link-hover link_heder_hover">Портфолио</span></a></li>
+
                             <li class=''><a href='#how-work' class='header__link'><span
                                         class="link-hover link_heder_hover">Как
                                         работаем</span></a></li>
-                            <li class=''><a href='#test' class='header__link'><span
+                            <li class=''><a href='#page-calc' class='header__link'><span
                                         class="link-hover link_heder_hover">Тарифы</span></a>
                             </li>
+
+                            <li class=''><a href='#portfolio' class='header__link popup-link'><span
+                                        class="link-hover link_heder_hover">Портфолио</span></a></li>
+
                             <li class=''><a href='#reviews' class='header__link'><span
                                         class="link-hover link_heder_hover">Отзывы</span></a>
                             </li>
@@ -64,7 +67,7 @@
         <main class="main">
             <!-- page-1 -->
 
-            <div class="page_1">
+            <div class="page_1 xsection" id="page1">
                 <div class="container">
                     <section class="page_1_content">
                         <!-- item -->
@@ -114,11 +117,11 @@
 
                             <!-- btn-container -->
                             <div class="btn-container">
-                                <a class="main-btn main-btn_transperent" href="#">
+                                <a class="main-btn main-btn_transperent" href="#page-calc">
                                     калькулятор стоимости
                                 </a>
 
-                                <a class="main-btn main-btn_yellow" href="#">
+                                <a class="main-btn main-btn_yellow" href="#page-calc">
                                     заказать печать
                                 </a>
                             </div>
@@ -131,9 +134,9 @@
                         </div>
                     </section>
 
-                    <button class="btn_scroll_down">
+                    <a href="#how-work" class="btn_scroll_down">
 
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -384,7 +387,7 @@
 
             <!-- page-calc -->
 
-            <section class="page-calc">
+            <section id="page-calc" class="page-calc xsection">
                 <div class="container">
                     <div class="calc-wrap">
                         <!-- item -->
@@ -528,7 +531,7 @@
             <!-- page-portfolio -->
 
 
-            <section class="page-portfolio">
+            <section id="portfolio" class="page-portfolio xsection">
                 <div class="container">
                     <!-- h2-container -->
                     <div class="h2-container">
@@ -720,6 +723,19 @@
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <!-- libs -->
 
+
+    <script>
+        $(document).ready(function () {
+            $("a[href*=#]").on("click", function (e) {
+                var anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(anchor.attr('href')).offset().top
+                }, 777);
+                e.preventDefault();
+                return false;
+            });
+        });
+    </script>
 
     <script src='js/main.js'></script>
 </body>

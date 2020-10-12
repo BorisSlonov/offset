@@ -19,22 +19,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+//slowScroll
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const blockID = anchor.getAttribute('href').substr(1)
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        })
+    })
+}
+
+
+
 $(document).ready(function () {
 
-    //slowScroll
-    var $page = $('html, body');
-    $('a[href*="#"]').click(function () {
-        $page.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 3000);
-        return false;
-    });
+
 
     //currentLight
     jQuery(window).scroll(function () {
         var $sections = $('.xsection');
         $sections.each(function (i, el) {
-            var top = $(el).offset().top - 100;
+            var top = $(el).offset().top - 150;
             var bottom = top + $(el).height();
             var scroll = $(window).scrollTop();
             var id = $(el).attr('id');
@@ -44,7 +56,7 @@ $(document).ready(function () {
 
             }
 
-            if (top = 0) {
+            if (top == 150) {
                 $('a.active').removeClass('active');
             }
         })
@@ -61,6 +73,9 @@ $(document).ready(function () {
             jQuery('.header').addClass('bgc-fff-no');
         }
     });
+
+
+
 
 
 
@@ -483,7 +498,7 @@ $(document).ready(function () {
         }
     })
 
-   
+
 
 });
 
