@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    height: 100%;
+    height: calc(100% + 300px);
     min-height: calc(100vh + 300px);
     color: #fff;
 }

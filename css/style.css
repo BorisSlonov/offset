@@ -1013,7 +1013,7 @@ a.active {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  height: 100%;
+  height: calc(100% + 300px);
   min-height: calc(100vh + 300px);
   color: #fff;
 }
@@ -1116,6 +1116,9 @@ a.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -1126,7 +1129,7 @@ a.active {
 }
 
 .how_work__item {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-left: .25rem;
   margin-right: .25rem;
 }
@@ -1193,6 +1196,12 @@ a.active {
 .services__item50:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+.services__item50:hover .main-btn {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
 }
 
 .services__item50_h3 {
@@ -1310,6 +1319,10 @@ a.active {
   color: #fff;
 }
 
+.services-name-2 {
+  left: -51px;
+}
+
 @media (max-width: 768px) {
   .services {
     width: 100%;
@@ -1319,6 +1332,10 @@ a.active {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .services__row {
     -webkit-box-orient: vertical;
@@ -1330,13 +1347,16 @@ a.active {
         flex-basis: calc(50% - 10px);
   }
   .services__row:not(:first-child) {
-    margin-top: 0;
+    margin-top: 1rem;
   }
   .services__item:not(:first-child) {
     margin-top: 1rem;
   }
   .we_dist {
     margin-top: 1rem;
+  }
+  .services-name-2 {
+    left: -50px;
   }
 }
 
@@ -1352,6 +1372,15 @@ a.active {
   }
   .services-name {
     left: -5px;
+  }
+  .services-name-2 {
+    left: -45px;
+  }
+}
+
+@media (max-width: 425px) {
+  .services-name-2 {
+    left: -35px;
   }
 }
 
@@ -1371,6 +1400,41 @@ a.active {
 
 .services-visitka {
   background-image: url(../img/product/visitki.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.services-listovka {
+  background-image: url(../img/product/listovki.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.services-byklet {
+  background-image: url(../img/product/byklety.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.services-afisha {
+  background-image: url(../img/product/afishi.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.services-banner {
+  background-image: url(../img/product/bannery.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.services-stick {
+  background-image: url(../img/product/stickers.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;

@@ -39,8 +39,14 @@
     }
 
     &__item50:hover {
-    
+
         transform: translateY(-5px);
+
+        .main-btn {
+            background-color: #fff;
+            color: #000;
+            border-color: #fff;
+        }
     }
 
     &__item50_h3 {
@@ -51,12 +57,12 @@
 
     &__item50_h3_yellow {
         color: #ffd755;
-        
+
     }
 
-    &__item50_h3_white{
+    &__item50_h3_white {
         color: #fff;
-        
+
     }
 }
 
@@ -156,6 +162,9 @@
     color: #fff;
 }
 
+.services-name-2 {
+    left: -51px;
+}
 
 
 @media(max-width:768px) {
@@ -163,6 +172,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
 
         &__row {
             flex-direction: column;
@@ -171,7 +181,7 @@
         }
 
         &__row:not(:first-child) {
-            margin-top: 0;
+            margin-top: 1rem;
         }
 
         &__item:not(:first-child) {
@@ -182,6 +192,12 @@
     .we_dist {
         margin-top: 1rem;
     }
+
+    .services-name-2 {
+        left: -50px;
+    }
+
+   
 }
 
 @media(max-width:500px) {
@@ -196,8 +212,17 @@
     .services-name {
         left: -5px;
     }
+
+    .services-name-2 {
+        left: -45px;
+    }
 }
 
+@media(max-width:425px) {
+    .services-name-2 {
+        left: -35px;
+    }
+}
 
 
 //bg
@@ -218,6 +243,44 @@
 
 .services-visitka {
     background-image: url(../img/product/visitki.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.services-listovka {
+    background-image: url(../img/product/listovki.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.services-byklet {
+    background-image: url(../img/product/byklety.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+.services-afisha {
+    background-image: url(../img/product/afishi.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+.services-banner {
+    background-image: url(../img/product/bannery.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+.services-stick {
+    background-image: url(../img/product/stickers.jpg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
