@@ -24,7 +24,6 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        padding: .75em 0;
     }
     &__logo {
         flex-basis: 20%;
@@ -49,9 +48,15 @@
         text-decoration: none;
         transition: all .45s;
         font-family: 'Montserrat', sans-serif;
+       
 
         &:hover {
             cursor: pointer;
+        }
+
+        .link-hover {
+            display: inline-block;
+            padding: 1rem 0;
         }
 
     }
@@ -100,6 +105,7 @@
 .logo-img {
     max-width: 8rem;
     width: 100%;
+    
 }
 
 

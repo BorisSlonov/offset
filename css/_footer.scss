@@ -1,0 +1,64 @@
+.wrap-footer {
+    background-color: #2b2b2b;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    &__item {
+        display: flex;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        margin-left: 1rem;
+
+        .link-hover {
+            display: inline-block;
+            padding: 1rem 0;
+        }
+    }
+
+    &__link {
+        @include monttserat;
+        display: inline-block;
+        color: #fff;
+        font-weight: 300;
+    }
+
+    &__link{
+
+        margin-left: 1rem;
+    }
+
+
+
+}
+
+@media(max-width:900px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+
+        &__item {
+            flex-direction: column;
+        }
+
+        &__list {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-left: 0;
+        }
+
+        &__link{
+
+            margin-left: .5rem;
+            margin-right: 0.5rem;
+        }
+    }
+}

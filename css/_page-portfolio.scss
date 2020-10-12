@@ -52,12 +52,25 @@
                 opacity: 1;
             }
 
+            img {
+                border-color: #f7b02bdc;
+            }
+
+           
+
             &::after {
                 opacity: 1;
             }
         }
     }
 
+    .main-btn {
+           &:hover {
+               background-color: #fff;
+               color: #f7b02b;
+               border-color: #fff;
+           }
+    }
 
 }
 
@@ -66,9 +79,8 @@
     @include monttserat;
     position: absolute;
     z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 10px;
+    left: 10px;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -112,3 +124,17 @@
 
     }
 }
+
+
+
+
+
+
+//page-reviews
+
+.page-reviews {
+    margin: 3rem 0; 
+}
+
+//page-map 
+

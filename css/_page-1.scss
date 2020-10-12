@@ -28,6 +28,8 @@
 
     &__row {
         display: flex;
+        max-width: 80%;
+
 
     }
 
@@ -38,6 +40,7 @@
     &__item {
         display: flex;
         align-items: center;
+        flex-basis: 50%;
     }
 
     &__name {
@@ -54,6 +57,7 @@
     }
 
     &__icon {
+        width: 100%;
         max-width: 50px;
     }
 }
@@ -73,10 +77,21 @@
             display: none;
         }
     }
+
+    .page_1_product {
+        &__row {
+            max-width: 100%;
+        }
+    }
 }
 
 @media(max-width:550px) {
     .page_1_content {
         padding-top: 50px;
+    }
+    .page_1_product  {
+        &__icon {
+            max-width: 30px;
+        }
     }
 }
