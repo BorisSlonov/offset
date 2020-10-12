@@ -897,13 +897,13 @@ a.active {
 }
 
 .main-btn_footer {
-  background-color: #fff;
-  color: #2b2b2b;
+  background-color: #2b2b2b;
+  color: #fff;
 }
 
 .main-btn_footer:hover {
-  background-color: #2b2b2b;
-  color: #fff;
+  background-color: #fff;
+  color: #2b2b2b;
 }
 
 .btn_scroll_down {

@@ -32,11 +32,12 @@
     }
 
     &_footer {
-        background-color: #fff;
-        color:  #2b2b2b;
+        background-color: #2b2b2b;
+        color:  #fff;
+       
         &:hover {
-            background-color: #2b2b2b;
-            color:   #fff;
+            background-color: #fff;
+            color:  #2b2b2b;
         }
     }
 }
