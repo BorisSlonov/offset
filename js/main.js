@@ -82,7 +82,7 @@ $(document).ready(function () {
     //calc
 
 
-
+  
     //взаимоисключаем селекеты
     $('select').change(function () {
         //select
@@ -120,7 +120,7 @@ $(document).ready(function () {
             $('#format option[value="5"]').prop('selected', false);
         }
 
-
+       
         //если чб или двухцветная - только офсет бумага
         if (color == 1 || color == 2) {
             // b/w
@@ -140,9 +140,14 @@ $(document).ready(function () {
         }
 
 
+      
+        // сгибы
         $('#corner').prop('disabled', true);
         if (color == 3 && paper == 2) {
-            $('#corner').prop('disabled', false);
+            $('#corner-container').show()
+        } else {
+            $('#corner option[value="0"]').prop('selected', true);
+            $('#corner-container').hide()
         }
 
 
